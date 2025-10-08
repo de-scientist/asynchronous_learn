@@ -76,3 +76,13 @@ fetchUser((user) => {
     });
   });
 });
+
+//creating a promise use resolve and reject
+let myPromise = new Promise(function (resolve, reject) {
+  let x = 1;
+  if (x === 1) {
+    resolve("x is 1");
+  } else {
+    reject("x is not 1");
+  }
+});

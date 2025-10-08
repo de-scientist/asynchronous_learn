@@ -11,4 +11,27 @@
 * **Fetch user's posts after getting user data**
 * **Fetch comments on a post after retrieving posts**
 * **Display all the data after everything is fetched.**
-* **Promise -**
+* **Promise -  is an object that links producing and consuming code.**
+
+
+
+
+
+#### **States in Promises**
+
+* **Pending: initial state; neither fulfilled nor rejected.**
+* **Fulfilled: the operation is completed successfully.**
+* **Rejection: the operation has failed.**
+
+
+
+#### **Creating a promise﻿**
+
+* **A promise is created using the new Promise() constructor.**
+* **The new Promise() constructor accepts a single argument, which is a function called executor.**
+* **The promise executes the executor function immediately.**
+
+
+
+
+
