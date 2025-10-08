@@ -167,7 +167,7 @@ async function processUser() {
 
 processUser();
 
-//handle errors using exception handling - try() and catch()
+//handle errors using exception handling - try{} and catch{}
 function fetchUser() {
   return new Promise(function (resolve, reject) {
     let error = true;
