@@ -146,3 +146,23 @@ fetchUser()
   .catch((error) => {
     console.log(error);
   });
+
+
+//use of async/await to consume promises
+function fetchUser() {
+  return new Promise(function (resolve, reject) {
+    let error = true;
+    if (error === true) {
+      reject("There was an error");
+    } else {
+      resolve({ username: "_john", role: "Admin" });
+    }
+  });
+}
+
+async function processUser() {
+  const user = await fetchUser();
+  console.log(user);
+}
+
+processUser();

@@ -45,7 +45,15 @@
 
 #### **Returning a promise from a function﻿**
 
-* **we can also return a promise from a function**
+* **we can also return a promise from a function:** 
+* **resolve({ username: "\_john", role: "Admin" });**
+
+
+
+#### **Consuming Promises With Async/Await**
+
+* **It's built on top of Promises but allows you to write asynchronous code that looks like synchronous code.**
+* **async/await is mostly used to consume promises.**
 
 
 
