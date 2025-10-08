@@ -28,3 +28,15 @@ function showData(data) {
 
 const userData = fetchData();
 showData(userData);
+
+//use setTimeout
+function fetchData(callback) {
+  setTimeout(() => {
+    let data = { username: "John Doe", role: "Admin" };
+    callback(data);
+  }, 2000);
+}
+
+fetchData(function (data) {
+  console.log(`Username is ${data.username} and role is ${data.role}`);
+});
