@@ -40,3 +40,39 @@ function fetchData(callback) {
 fetchData(function (data) {
   console.log(`Username is ${data.username} and role is ${data.role}`);
 });
+
+
+function fetchUser(callback) {
+  setTimeout(() => {
+    console.log("Fetched user data");
+    let user = { username: "John Doe", role: "Admin" };
+    callback(user);
+  }, 2000);
+}
+
+function fetchPosts(user, callback) {
+  setTimeout(() => {
+    console.log(`Fetched posts for ${user.username}`);
+    let posts = ["Post 1", "Post 2", "Post 3"];
+    callback(posts);
+  }, 2000);
+}
+
+function fetchComments(post, callback) {
+  setTimeout(() => {
+    console.log(`Fetched comments for ${post}`);
+    let comments = ["Nice post!", "Great work!", "Interesting read"];
+    callback(comments);
+  }, 2000);
+}
+
+// Callback Hell (Nested Callbacks)
+fetchUser((user) => {
+  fetchPosts(user, (posts) => {
+    fetchComments(posts[0], (comments) => {
+      console.log(`User: ${user.username}, Role: ${user.role}`);
+      console.log(`Posts: ${posts}`);
+      console.log(`Comments on first post: ${comments}`);
+    });
+  });
+});
