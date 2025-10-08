@@ -37,10 +37,9 @@
 #### **Consuming a promise﻿**
 
 * **We can then use .then() to handle resolved value and .catch() to handle errors (rejected value).**
-* 
 * **.then() takes a callback function, which receives the resolved value of the Promise as its argument.**
-* 
 * **.catch() also takes a callback function, which receives the error (rejected value) as its argument when the Promise is rejected.**
+* **There is also .finally() which gets executed regardless of whether the promise was a success or failure;**
 
 
 

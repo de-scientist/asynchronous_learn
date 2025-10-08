@@ -87,8 +87,8 @@ let myPromise = new Promise(function (resolve, reject) {
   }
 });
 
-//consuming a promise
-let myPromise = new Promise(function (resolve, reject) {
+//consuming a promise using .then() and .catch()
+let myPromise2 = new Promise(function (resolve, reject) {
   let x = 5;
   if (x === 1) {
     resolve("x is 1");
@@ -97,10 +97,31 @@ let myPromise = new Promise(function (resolve, reject) {
   }
 });
 
-myPromise
+myPromise2
   .then((result) => {
     console.log(result);
   })
   .catch((error) => {
     console.log(error);
+  });
+
+// use of .finally()
+let myPromise3 = new Promise(function (resolve, reject) {
+  let x = 1;
+  if (x === 1) {
+    resolve("x is 1");
+  } else {
+    reject("x is not 1");
+  }
+});
+
+myPromise3
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  })
+  .finally(() => {
+    console.log("It was nice working with this promise");
   });
