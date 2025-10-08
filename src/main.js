@@ -166,3 +166,26 @@ async function processUser() {
 }
 
 processUser();
+
+//handle errors using exception handling - try() and catch()
+function fetchUser() {
+  return new Promise(function (resolve, reject) {
+    let error = true;
+    if (error === true) {
+      reject("There was an error");
+    } else {
+      resolve({ username: "_john", role: "Admin" });
+    }
+  });
+}
+
+async function processUser() {
+  try {
+    const user = await fetchUser();
+    console.log(user);
+  } catch {
+    console.log("Err");
+  }
+}
+
+processUser();

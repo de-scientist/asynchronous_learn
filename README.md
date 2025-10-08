@@ -57,3 +57,6 @@
 
 
 
+#### **Handling Errors in async/await﻿**
+
+* **One of the strengths of async/await is its ability to handle errors in a synchronous way, using try...catch.**
