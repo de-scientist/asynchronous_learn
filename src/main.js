@@ -189,3 +189,53 @@ async function processUser() {
 }
 
 processUser();
+
+
+//catch block can also receive the error thrown from the promise -> catch(error)
+function fetchUser() {
+  return new Promise(function (resolve, reject) {
+    let error = true;
+    if (error === true) {
+      reject("There was an error");
+    } else {
+      resolve({ username: "_john", role: "Admin" });
+    }
+  });
+}
+
+async function processUser() {
+  try {
+    const user = await fetchUser();
+    console.log(user);
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+processUser();
+
+
+//try..catch also has a finally block:\
+function fetchUser() {
+  return new Promise(function (resolve, reject) {
+    let error = true;
+    if (error === true) {
+      reject("There was an error");
+    } else {
+      resolve({ username: "_john", role: "Admin" });
+    }
+  });
+}
+
+async function processUser() {
+  try {
+    const user = await fetchUser();
+    console.log(user);
+  } catch (error) {
+    console.log(error);
+  } finally {
+    console.log(`Process completed`);
+  }
+}
+
+processUser();

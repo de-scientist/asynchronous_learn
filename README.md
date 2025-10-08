@@ -60,3 +60,6 @@
 #### **Handling Errors in async/await﻿**
 
 * **One of the strengths of async/await is its ability to handle errors in a synchronous way, using try...catch.**
+* **The catch block can also receive the error thrown from the promise -> catch(error)**
+* **try..catch also has a finally block:\\**
+* 
