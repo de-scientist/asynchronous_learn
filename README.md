@@ -30,6 +30,17 @@
 * **A promise is created using the new Promise() constructor.**
 * **The new Promise() constructor accepts a single argument, which is a function called executor.**
 * **The promise executes the executor function immediately.**
+* **The executor function takes two parameters: the first parameter is a function to call with a value when the promise is fulfilled (mostly referred to as resolve), and the second is a function to call when the promise fails (mostly referred to as reject)**
+
+
+
+#### **Consuming a promise﻿**
+
+* **We can then use .then() to handle resolved value and .catch() to handle errors (rejected value).**
+* 
+* **.then() takes a callback function, which receives the resolved value of the Promise as its argument.**
+* 
+* **.catch() also takes a callback function, which receives the error (rejected value) as its argument when the Promise is rejected.**
 
 
 

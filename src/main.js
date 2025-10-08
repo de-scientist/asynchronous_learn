@@ -86,3 +86,21 @@ let myPromise = new Promise(function (resolve, reject) {
     reject("x is not 1");
   }
 });
+
+//consuming a promise
+let myPromise = new Promise(function (resolve, reject) {
+  let x = 5;
+  if (x === 1) {
+    resolve("x is 1");
+  } else {
+    reject("x is not 1");
+  }
+});
+
+myPromise
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
