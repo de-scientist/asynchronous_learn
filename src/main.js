@@ -125,3 +125,24 @@ myPromise3
   .finally(() => {
     console.log("It was nice working with this promise");
   });
+
+
+//Returning a promise from a function
+function fetchUser() {
+  return new Promise(function (resolve, reject) {
+    let error = false;
+    if (error === true) {
+      reject("There was an error");
+    } else {
+      resolve({ username: "_john", role: "Admin" });
+    }
+  });
+}
+
+fetchUser()
+  .then((user) => {
+    console.log(`Username: ${user.username}, Role: ${user.role}`);
+  })
+  .catch((error) => {
+    console.log(error);
+  });

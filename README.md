@@ -43,5 +43,9 @@
 
 
 
+#### **Returning a promise from a function﻿**
+
+* **we can also return a promise from a function**
+
 
 
