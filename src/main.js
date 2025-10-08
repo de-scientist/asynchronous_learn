@@ -15,11 +15,13 @@ setInterval(function()  {
 
 
 //callbacks
+//producing code
 function fetchData() {
     let data = { username: "John Doe", role: "Admin" };
     return data;
 }
 
+//consuming code
 function showData(data) {
     console.log(`Username is ${data.username} and role is ${data.role}`);
 }
