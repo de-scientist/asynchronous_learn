@@ -12,3 +12,17 @@ setInterval(function()  {
   console.log(`$i = ${i}`);
   
 }, 1000);
+
+
+//callbacks
+function fetchData() {
+    let data = { username: "John Doe", role: "Admin" };
+    return data;
+}
+
+function showData(data) {
+    console.log(`Username is ${data.username} and role is ${data.role}`);
+}
+
+const userData = fetchData();
+showData(userData);
